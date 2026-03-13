@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Titus Lucretius Postumus — PF2e Character Sheet</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Merriweather:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
+  :root {
+    --blood: #8B0000;
+    --blood-light: #a52a2a;
+    --bone: #f5f0e8;
+    --parchment: #faf6ee;
+    --shadow: #1a1a2e;
+    --ink: #2c2c2c;
+    --gold: #c9a84c;
+    --gold-dim: #a68a3e;
+    --purple: #4a1942;
+    --divider: #d4c9b0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background: #1a1a2e;
+    color: var(--ink);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+  }
+
+  .sheet {
+    background: var(--parchment);
+    max-width: 900px;
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 0 60px rgba(139, 0, 0, 0.3), 0 0 120px rgba(0,0,0,0.5);
+    overflow: hidden;
+  }
+
+  /* ── Header ── */
+  .header {
+    background: linear-gradient(135deg, var(--shadow) 0%, var(--purple) 50%, var(--blood) 100%);
+    color: #fff;
+    padding: 28px 32px 22px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0; height: 4px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-dim), var(--gold));
+  }
+  .header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  }
+  .header-sub {
+    font-family: 'Merriweather', serif;
+    font-size: 0.95rem;
+    margin-top: 4px;
+    color: #d4c9b0;
+  }
+  .header-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 12px;
+    font-size: 0.85rem;
+    color: #bbb;
+  }
+  .header-meta span { display: flex; align-items: center; gap: 4px; }
+  .header-meta .label { color: var(--gold); font-weight: 600; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 1px; }
+
+  /* ── Sections ── */
+  .body { padding: 24px 28px 32px; }
+
+  .section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--blood);
+    border-bottom: 2px solid var(--blood);
+    padding-bottom: 4px;
+    margin-bottom: 14px;
+    margin-top: 28px;
+  }
+  .section-title:first-child { margin-top: 0; }
+
+  /* ── Ability Scores ── */
+  .abilities {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    margin-bottom: 4px;
+  }
+  .ability-box {
+    background: #fff;
+    border: 2px solid var(--divider);
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px 4px 8px;
+    transition: border-color 0.2s;
+  }
+  .ability-box:hover { border-color: var(--blood); }
+  .ability-name {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--blood);
+    text-transform: uppercase;
+  }
+  .ability-mod {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--shadow);
+    line-height: 1.2;
+  }
+  .ability-score {
+    font-size: 0.75rem;
+    color: #888;
+  }
+
+  /* ── Stat Row (HP, AC, Speed, Perception) ── */
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 18px;
+  }
+  .stat-card {
+    background: var(--shadow);
+    color: #fff;
+    border-radius: 8px;
+    text-align: center;
+    padding: 12px 8px;
+  }
+  .stat-card .stat-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--gold);
+    font-weight: 600;
+  }
+  .stat-card .stat-value {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+  }
+
+  /* ── Saves ── */
+  .saves {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 6px;
+  }
+  .save-box {
+    background: #fff;
+    border: 2px solid var(--divider);
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px 8px;
+  }
+  .save-box .save-name {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888;
+    font-weight: 600;
+  }
+  .save-box .save-val {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--shadow);
+  }
+  .save-box .save-prof {
+    font-size: 0.65rem;
+    color: var(--blood-light);
+    font-weight: 600;
+  }
+
+  /* ── Skills ── */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px 24px;
+  }
+  .skill-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 8px;
+    border-radius: 4px;
+    font-size: 0.88rem;
+  }
+  .skill-row:nth-child(odd) { background: rgba(0,0,0,0.03); }
+  .skill-row.trained { font-weight: 600; }
+  .skill-name { color: var(--ink); }
+  .skill-name .ability-tag { color: #aaa; font-size: 0.72rem; font-weight: 400; }
+  .skill-bonus { font-weight: 700; color: var(--shadow); min-width: 32px; text-align: right; }
+  .skill-row.trained .skill-bonus { color: var(--blood); }
+  .prof-badge {
+    display: inline-block;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 1px 5px;
+    border-radius: 3px;
+    margin-left: 4px;
+    vertical-align: middle;
+  }
+  .prof-t { background: #e8e8e8; color: #555; }
+  .prof-e { background: var(--blood); color: #fff; }
+  .prof-m { background: var(--gold); color: var(--shadow); }
+
+  /* ── Weapons ── */
+  .weapons-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+  }
+  .weapons-table th {
+    text-align: left;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888;
+    padding: 4px 8px 6px;
+    border-bottom: 1px solid var(--divider);
+  }
+  .weapons-table td {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+  }
+  .weapons-table .atk { font-weight: 700; color: var(--blood); }
+
+  /* ── Armor ── */
+  .armor-row {
+    background: #fff;
+    border: 1px solid var(--divider);
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* ── Spells ── */
+  .spell-level {
+    margin-top: 10px;
+    background: #fff;
+    border: 1px solid var(--divider);
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .spell-level-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+  }
+  .spell-level-name {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--purple);
+  }
+  .spell-slots {
+    font-size: 0.75rem;
+    color: #888;
+    font-weight: 600;
+  }
+  .spell-slots .slot {
+    display: inline-block;
+    width: 18px; height: 18px;
+    border: 2px solid var(--blood);
+    border-radius: 50%;
+    margin-left: 3px;
+    vertical-align: middle;
+  }
+  .spell-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .spell-tag {
+    background: var(--bone);
+    border: 1px solid var(--divider);
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    color: var(--ink);
+  }
+
+  /* ── Focus ── */
+  .focus-box {
+    background: linear-gradient(135deg, var(--purple), var(--blood));
+    color: #fff;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .focus-box .focus-label { font-weight: 700; }
+  .focus-point {
+    width: 22px; height: 22px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  /* ── Feats ── */
+  .feats-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .feat-chip {
+    background: #fff;
+    border: 1px solid var(--divider);
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+  .feat-chip .feat-type {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #aaa;
+    display: block;
+    margin-bottom: 1px;
+  }
+
+  /* ── Equipment ── */
+  .equip-list {
+    list-style: none;
+    padding: 0;
+  }
+  .equip-list li {
+    padding: 6px 8px;
+    font-size: 0.88rem;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+  }
+  .equip-qty { color: #888; font-size: 0.8rem; }
+
+  .money-row {
+    display: flex;
+    gap: 16px;
+    margin-top: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  .money-row span { color: var(--gold-dim); }
+
+  /* ── Specials ── */
+  .specials-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .special-tag {
+    background: var(--shadow);
+    color: var(--gold);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+</style>
+</head>
+<body>
+
+<div class="sheet">
+  <!-- HEADER -->
+  <div class="header">
+    <h1>Titus Lucretius Postumus</h1>
+    <div class="header-sub">Level 4 Human (Dhampir) Sorcerer — Bloodline: Undead</div>
+    <div class="header-meta">
+      <span><span class="label">Background</span> Academy Dropout</span>
+      <span><span class="label">Deity</span> Orcus</span>
+      <span><span class="label">Alignment</span> CE</span>
+      <span><span class="label">Size</span> Medium</span>
+      <span><span class="label">Age</span> 36</span>
+      <span><span class="label">Pronouns</span> They/Them</span>
+    </div>
+  </div>
+
+  <div class="body">
+
+    <!-- ABILITY SCORES -->
+    <div class="section-title">Ability Scores</div>
+    <div class="abilities">
+      <div class="ability-box">
+        <div class="ability-name">Str</div>
+        <div class="ability-mod">+0</div>
+        <div class="ability-score">10</div>
+      </div>
+      <div class="ability-box">
+        <div class="ability-name">Dex</div>
+        <div class="ability-mod">+2</div>
+        <div class="ability-score">14</div>
+      </div>
+      <div class="ability-box">
+        <div class="ability-name">Con</div>
+        <div class="ability-mod">+1</div>
+        <div class="ability-score">12</div>
+      </div>
+      <div class="ability-box">
+        <div class="ability-name">Int</div>
+        <div class="ability-mod">+2</div>
+        <div class="ability-score">14</div>
+      </div>
+      <div class="ability-box">
+        <div class="ability-name">Wis</div>
+        <div class="ability-mod">+0</div>
+        <div class="ability-score">10</div>
+      </div>
+      <div class="ability-box">
+        <div class="ability-name">Cha</div>
+        <div class="ability-mod">+4</div>
+        <div class="ability-score">18</div>
+      </div>
+    </div>
+
+    <!-- KEY STATS -->
+    <div class="stat-row">
+      <div class="stat-card">
+        <div class="stat-label">Hit Points</div>
+        <div class="stat-value">36</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Armor Class</div>
+        <div class="stat-value">19</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Speed</div>
+        <div class="stat-value">25 ft</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Perception</div>
+        <div class="stat-value">+6</div>
+      </div>
+    </div>
+
+    <!-- SAVING THROWS -->
+    <div class="section-title">Saving Throws</div>
+    <div class="saves">
+      <div class="save-box">
+        <div class="save-name">Fortitude</div>
+        <div class="save-val">+7</div>
+        <div class="save-prof">Trained</div>
+      </div>
+      <div class="save-box">
+        <div class="save-name">Reflex</div>
+        <div class="save-val">+8</div>
+        <div class="save-prof">Trained</div>
+      </div>
+      <div class="save-box">
+        <div class="save-name">Will</div>
+        <div class="save-val">+8</div>
+        <div class="save-prof">Expert</div>
+      </div>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="section-title">Skills</div>
+    <div class="skills-grid">
+      <div class="skill-row">
+        <span class="skill-name">Acrobatics <span class="ability-tag">DEX</span></span>
+        <span class="skill-bonus">+2</span>
+      </div>
+      <div class="skill-row trained">
+        <span class="skill-name">Arcana <span class="ability-tag">INT</span> <span class="prof-badge prof-t">T</span></span>
+        <span class="skill-bonus">+8</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">Athletics <span class="ability-tag">STR</span></span>
+        <span class="skill-bonus">+0</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">Crafting <span class="ability-tag">INT</span></span>
+        <span class="skill-bonus">+2</span>
+      </div>
+      <div class="skill-row trained">
+        <span class="skill-name">Deception <span class="ability-tag">CHA</span> <span class="prof-badge prof-t">T</span></span>
+        <span class="skill-bonus">+10</span>
+      </div>
+      <div class="skill-row trained">
+        <span class="skill-name">Diplomacy <span class="ability-tag">CHA</span> <span class="prof-badge prof-t">T</span></span>
+        <span class="skill-bonus">+10</span>
+      </div>
+      <div class="skill-row trained">
+        <span class="skill-name">Intimidation <span class="ability-tag">CHA</span> <span class="prof-badge prof-e">E</span></span>
+        <span class="skill-bonus">+12</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">Medicine <span class="ability-tag">WIS</span></span>
+        <span class="skill-bonus">+0</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">Nature <span class="ability-tag">WIS</span></span>
+        <span class="skill-bonus">+0</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">Occultism <span class="ability-tag">INT</span></span>
+        <span class="skill-bonus">+2</span>
+      </div>
+      <div class="skill-row trained">
+        <span class="skill-name">Performance <span class="ability-tag">CHA</span> <span class="prof-badge prof-t">T</span></span>
+        <span class="skill-bonus">+10</span>
+      </div>
+      <div class="skill-row trained">
+        <span class="skill-name">Religion <span class="ability-tag">WIS</span> <span class="prof-badge prof-t">T</span></span>
+        <span class="skill-bonus">+6</span>
+      </div>
+      <div class="skill-row trained">
+        <span class="skill-name">Society <span class="ability-tag">INT</span> <span class="prof-badge prof-t">T</span></span>
+        <span class="skill-bonus">+8</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">Stealth <span class="ability-tag">DEX</span></span>
+        <span class="skill-bonus">+2</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">Survival <span class="ability-tag">WIS</span></span>
+        <span class="skill-bonus">+0</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">Thievery <span class="ability-tag">DEX</span></span>
+        <span class="skill-bonus">+2</span>
+      </div>
+      <div class="skill-row trained">
+        <span class="skill-name">Lore: Academia <span class="ability-tag">INT</span> <span class="prof-badge prof-t">T</span></span>
+        <span class="skill-bonus">+8</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">Class DC <span class="ability-tag">CHA</span> <span class="prof-badge prof-t">T</span></span>
+        <span class="skill-bonus">20</span>
+      </div>
+    </div>
+
+    <!-- WEAPONS -->
+    <div class="section-title">Weapons</div>
+    <table class="weapons-table">
+      <thead>
+        <tr><th>Weapon</th><th>Attack</th><th>Damage</th><th>Type</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>+1 Dueling Pistol</strong></td>
+          <td class="atk">+9</td>
+          <td>1d6</td>
+          <td>Piercing</td>
+        </tr>
+        <tr>
+          <td><strong>Dagger</strong></td>
+          <td class="atk">+8</td>
+          <td>1d4</td>
+          <td>Piercing</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- ARMOR -->
+    <div class="section-title">Armor</div>
+    <div class="armor-row">
+      <span><strong>+1 Explorer's Clothing</strong> (Unarmored)</span>
+      <span>AC <strong>19</strong></span>
+    </div>
+
+    <!-- SPELLS -->
+    <div class="section-title">Spells — Divine Spontaneous (CHA) · Spell Attack +10 · Spell DC 20</div>
+
+    <div class="spell-level">
+      <div class="spell-level-header">
+        <span class="spell-level-name">Cantrips (Rank 2)</span>
+        <span class="spell-slots">5 at will</span>
+      </div>
+      <div class="spell-list">
+        <span class="spell-tag">Daze</span>
+        <span class="spell-tag">Read the Air</span>
+        <span class="spell-tag">Shield</span>
+        <span class="spell-tag">Forbidding Ward</span>
+        <span class="spell-tag">Chill Touch</span>
+      </div>
+    </div>
+
+    <div class="spell-level">
+      <div class="spell-level-header">
+        <span class="spell-level-name">1st-Rank Spells</span>
+        <span class="spell-slots">
+          4/day
+          <span class="slot"></span><span class="slot"></span><span class="slot"></span><span class="slot"></span>
+        </span>
+      </div>
+      <div class="spell-list">
+        <span class="spell-tag">Magic Weapon</span>
+        <span class="spell-tag">Sanctuary</span>
+        <span class="spell-tag">Bless</span>
+        <span class="spell-tag">Harm</span>
+      </div>
+    </div>
+
+    <div class="spell-level">
+      <div class="spell-level-header">
+        <span class="spell-level-name">2nd-Rank Spells</span>
+        <span class="spell-slots">
+          4/day
+          <span class="slot"></span><span class="slot"></span><span class="slot"></span><span class="slot"></span>
+        </span>
+      </div>
+      <div class="spell-list">
+        <span class="spell-tag">Blood Vendetta</span>
+        <span class="spell-tag">Bone Spray</span>
+        <span class="spell-tag">Darkness</span>
+        <span class="spell-tag">False Life</span>
+      </div>
+    </div>
+
+    <!-- FOCUS -->
+    <div class="focus-box">
+      <div>
+        <div class="focus-label">Focus Spell: Undeath's Blessing</div>
+        <div style="font-size:0.8rem; opacity:0.8; margin-top:2px;">Divine · CHA</div>
+      </div>
+      <div>
+        <span class="focus-point"></span>
+        <span style="font-size:0.75rem; margin-left:6px; opacity:0.8;">1 Focus Point</span>
+      </div>
+    </div>
+
+    <!-- FEATS -->
+    <div class="section-title">Feats & Abilities</div>
+    <div class="feats-list">
+      <div class="feat-chip">
+        <span class="feat-type">Heritage</span>
+        Dhampir
+      </div>
+      <div class="feat-chip">
+        <span class="feat-type">Ancestry 1</span>
+        Eyes of the Night
+      </div>
+      <div class="feat-chip">
+        <span class="feat-type">Class 2</span>
+        Familiar
+      </div>
+      <div class="feat-chip">
+        <span class="feat-type">Class 4</span>
+        Bespell Weapon
+      </div>
+      <div class="feat-chip">
+        <span class="feat-type">Skill 2</span>
+        Intimidating Glare
+      </div>
+      <div class="feat-chip">
+        <span class="feat-type">Skill 4</span>
+        Virtuosic Performer
+      </div>
+      <div class="feat-chip">
+        <span class="feat-type">General 3</span>
+        Weapon Proficiency
+      </div>
+      <div class="feat-chip">
+        <span class="feat-type">Awarded</span>
+        Dubious Knowledge
+      </div>
+    </div>
+
+    <!-- SPECIALS -->
+    <div class="section-title">Special Abilities</div>
+    <div class="specials-list">
+      <span class="special-tag">Bloodline: Undead</span>
+      <span class="special-tag">Blood Magic</span>
+      <span class="special-tag">Darkvision</span>
+      <span class="special-tag">Low-Light Vision</span>
+      <span class="special-tag">Signature Spells</span>
+      <span class="special-tag">Dhampir</span>
+    </div>
+
+    <!-- EQUIPMENT -->
+    <div class="section-title">Equipment</div>
+    <ul class="equip-list">
+      <li><span>Bracers of Missile Deflection</span> <span class="equip-qty">×1</span></li>
+      <li><span>Oil of Unlife (Lesser)</span> <span class="equip-qty">×1</span></li>
+      <li><span>Bullets (10 rounds)</span> <span class="equip-qty">×10</span></li>
+      <li><span>+1 Dueling Pistol</span> <span class="equip-qty">×1</span></li>
+      <li><span>Dagger</span> <span class="equip-qty">×1</span></li>
+      <li><span>+1 Explorer's Clothing</span> <span class="equip-qty">worn</span></li>
+    </ul>
+    <div class="money-row">
+      <span>15 gp</span>
+    </div>
+
+    <!-- FAMILIAR -->
+    <div class="section-title">Familiar</div>
+    <div class="armor-row">
+      <span><strong>Familiar</strong> — Choose abilities daily</span>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

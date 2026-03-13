@@ -1,0 +1,27 @@
+{
+  "id": "headshot-theatre-district",
+  "title": "Headshot Theatre District",
+  "description": "A complete remake of the Headshot the Rot Maps.",
+  "version": "1.0.0",
+  "authors": [{ "name": "Mark Pearce", "discord": "Mark Pearce#2772" }],
+  "compatibility": {
+    "minimum": 12,
+    "verified": 13
+  },
+  "packs": [
+    {
+      "name": "headshot-theatre-district-scenes",
+      "label": "Headshot Theatre District Scenes",
+      "path": "packs/headshot-theatre-district-scenes",
+      "type": "Scene"
+    },
+    {
+      "name": "headshot-theatre-district-journal",
+      "label": "Headshot Theatre District Journal",
+      "path": "packs/headshot-theatre-district-journal",
+      "type": "JournalEntry"
+    }
+  ],
+  "manifest": "https://github.com/MarkPearce/headshot-theatre-district/releases/latest/download/module.json",
+  "download": "https://github.com/MarkPearce/headshot-theatre-district/releases/latest/download/headshot-theatre-district.zip"
+}

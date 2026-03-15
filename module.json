@@ -2,7 +2,8 @@
   "id": "headshot-theatre-district",
   "title": "Headshot Theatre District",
   "description": "A complete remake of the Headshot the Rot Maps.",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "license": "LICENSE",
   "authors": [{ "name": "Mark Pearce", "discord": "Mark Pearce#2772" }],
   "compatibility": {
     "minimum": 12,

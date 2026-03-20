@@ -1,4 +1,4 @@
 # marks-headshot-remake
 FoundryVTT Content Module
 
-![the latest version zip](https://img.shields.io/github/downloads/MarkPearce/marks-headshot-remake/latest/marks-headshot-remake.zip)
+![GitHub Downloads (all releases)](https://img.shields.io/github/downloads/rune-goblin/headshot-theatre-district/total)

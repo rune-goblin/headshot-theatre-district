@@ -9,7 +9,11 @@
   "width": 5100,
   "height": 6450,
   "padding": 0.25,
-  "initial": {},
+  "initial": {
+    "x": null,
+    "y": null,
+    "scale": null
+  },
   "backgroundColor": "#999999",
   "grid": {
     "size": 150,
@@ -17,14 +21,11 @@
     "color": "#000000",
     "alpha": 0.85,
     "distance": 5,
-    "units": "ft"
+    "units": "ft",
+    "style": "solidLines",
+    "thickness": 1
   },
   "tokenVision": true,
-  "fogExploration": true,
-  "fogReset": 1651499131588,
-  "globalLight": false,
-  "globalLightThreshold": null,
-  "darkness": 0.85,
   "drawings": [],
   "tokens": [
     {
@@ -33,7 +34,6 @@
       "displayName": 20,
       "actorId": "JthkAc5YhZPl30bS",
       "actorLink": false,
-      "actorData": {},
       "width": 1,
       "height": 1,
       "x": 4350,
@@ -41,7 +41,6 @@
       "elevation": 0,
       "lockRotation": false,
       "rotation": 0,
-      "effects": [],
       "alpha": 1,
       "hidden": true,
       "light": {
@@ -65,7 +64,9 @@
           "max": 1
         },
         "attenuation": 0.5,
-        "color": null
+        "color": null,
+        "negative": false,
+        "priority": 0
       },
       "disposition": -1,
       "displayBars": 20,
@@ -87,7 +88,11 @@
         "offsetX": 0,
         "offsetY": 0,
         "rotation": 0,
-        "tint": null
+        "tint": "#ffffff",
+        "anchorX": 0.5,
+        "anchorY": 0.5,
+        "fit": "contain",
+        "alphaThreshold": 0.75
       },
       "sight": {
         "angle": 360,
@@ -100,8 +105,36 @@
         "saturation": 0,
         "contrast": 0
       },
-      "overlayEffect": "",
-      "detectionModes": []
+      "detectionModes": [],
+      "delta": null,
+      "shape": 4,
+      "sort": 0,
+      "locked": false,
+      "occludable": {
+        "radius": 0
+      },
+      "ring": {
+        "enabled": false,
+        "colors": {
+          "ring": null,
+          "background": null
+        },
+        "effects": 1,
+        "subject": {
+          "scale": 1,
+          "texture": null
+        }
+      },
+      "turnMarker": {
+        "mode": 1,
+        "animation": null,
+        "src": null,
+        "disposition": false
+      },
+      "movementAction": null,
+      "_movementHistory": [],
+      "_regions": [],
+      "_key": "!scenes.tokens!ARBUoOUtU4iMFPHn.aK84QzJtd8JZxQjd"
     },
     {
       "_id": "sjH0mHCbg9H0B7B0",
@@ -109,7 +142,6 @@
       "displayName": 20,
       "actorId": "hEnjaGV8vAzg76Pw",
       "actorLink": true,
-      "actorData": {},
       "width": 1,
       "height": 1,
       "x": 4350,
@@ -117,7 +149,6 @@
       "elevation": 0,
       "lockRotation": false,
       "rotation": 0,
-      "effects": [],
       "alpha": 1,
       "hidden": false,
       "light": {
@@ -141,7 +172,9 @@
           "max": 1
         },
         "color": null,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "disposition": -1,
       "displayBars": 20,
@@ -161,12 +194,16 @@
       },
       "texture": {
         "src": "modules/headshot-theatre-district/artwork/bela-token.webp",
-        "tint": null,
+        "tint": "#ffffff",
         "scaleX": 1,
         "scaleY": 1,
         "offsetX": 0,
         "offsetY": 0,
-        "rotation": 0
+        "rotation": 0,
+        "anchorX": 0.5,
+        "anchorY": 0.5,
+        "fit": "contain",
+        "alphaThreshold": 0.75
       },
       "sight": {
         "angle": 360,
@@ -179,8 +216,36 @@
         "saturation": 0,
         "contrast": 0
       },
-      "overlayEffect": "",
-      "detectionModes": []
+      "detectionModes": [],
+      "delta": null,
+      "shape": 4,
+      "sort": 0,
+      "locked": false,
+      "occludable": {
+        "radius": 0
+      },
+      "ring": {
+        "enabled": false,
+        "colors": {
+          "ring": null,
+          "background": null
+        },
+        "effects": 1,
+        "subject": {
+          "scale": 1,
+          "texture": null
+        }
+      },
+      "turnMarker": {
+        "mode": 1,
+        "animation": null,
+        "src": null,
+        "disposition": false
+      },
+      "movementAction": null,
+      "_movementHistory": [],
+      "_regions": [],
+      "_key": "!scenes.tokens!ARBUoOUtU4iMFPHn.sjH0mHCbg9H0B7B0"
     }
   ],
   "lights": [
@@ -212,10 +277,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.2Rh9BZPiAkiTsg5K"
     },
     {
       "_id": "xm2HTMpersdhh3a9",
@@ -245,10 +314,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.xm2HTMpersdhh3a9"
     },
     {
       "_id": "FeWFQJmrzBdzjLKd",
@@ -278,10 +351,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.FeWFQJmrzBdzjLKd"
     },
     {
       "_id": "QGPccgp4u5juRqx9",
@@ -311,10 +388,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.QGPccgp4u5juRqx9"
     },
     {
       "_id": "lxdvPsj6X6G5aiZQ",
@@ -344,10 +425,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.lxdvPsj6X6G5aiZQ"
     },
     {
       "_id": "W4JB4mBG3TJ4BRwv",
@@ -377,10 +462,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.W4JB4mBG3TJ4BRwv"
     },
     {
       "_id": "9qWKz9y3pzjrYzTN",
@@ -410,10 +499,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.9qWKz9y3pzjrYzTN"
     },
     {
       "_id": "B7HnhygNaYDrQYO5",
@@ -443,10 +536,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.B7HnhygNaYDrQYO5"
     },
     {
       "_id": "0U92if3pHgr1arv2",
@@ -476,10 +573,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.0U92if3pHgr1arv2"
     },
     {
       "_id": "IvxjSlotEeoT2J31",
@@ -509,10 +610,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.IvxjSlotEeoT2J31"
     },
     {
       "_id": "d8sEkX7TetddUB2A",
@@ -542,10 +647,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.d8sEkX7TetddUB2A"
     },
     {
       "_id": "IY5eC2ULIbtmVG2t",
@@ -575,10 +684,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.IY5eC2ULIbtmVG2t"
     },
     {
       "_id": "2RRmcovtm4p5nRYY",
@@ -608,10 +721,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.2RRmcovtm4p5nRYY"
     },
     {
       "_id": "x6quuMFGOq6tRvXE",
@@ -641,10 +758,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.x6quuMFGOq6tRvXE"
     },
     {
       "_id": "2mlwg1uluFTJOJx4",
@@ -674,10 +795,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.2mlwg1uluFTJOJx4"
     },
     {
       "_id": "vbhfTGGsrB6lQd24",
@@ -707,10 +832,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.vbhfTGGsrB6lQd24"
     },
     {
       "_id": "8nl0NLHA5d60mokH",
@@ -740,10 +869,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.8nl0NLHA5d60mokH"
     },
     {
       "_id": "V6Urx6roVaiYd0Ff",
@@ -773,10 +906,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.V6Urx6roVaiYd0Ff"
     },
     {
       "_id": "lJL9M5pPMdr6Xh2v",
@@ -806,10 +943,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.lJL9M5pPMdr6Xh2v"
     },
     {
       "_id": "Tnxxi7fCet6cJw9a",
@@ -839,10 +980,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.Tnxxi7fCet6cJw9a"
     },
     {
       "_id": "CYYHBrmw0yGqfkTI",
@@ -872,10 +1017,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.CYYHBrmw0yGqfkTI"
     },
     {
       "_id": "59kyQUOKW93FRPIn",
@@ -905,10 +1054,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.59kyQUOKW93FRPIn"
     },
     {
       "_id": "wRtO0q9qM1TLkYKR",
@@ -938,10 +1091,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.wRtO0q9qM1TLkYKR"
     },
     {
       "_id": "HI75Pwsaypbq7nHJ",
@@ -971,10 +1128,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.HI75Pwsaypbq7nHJ"
     },
     {
       "_id": "WTn3vcR7DQ4Y0wnA",
@@ -1004,10 +1165,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.WTn3vcR7DQ4Y0wnA"
     },
     {
       "_id": "Ebo18mwnNsRGdbIc",
@@ -1037,10 +1202,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.Ebo18mwnNsRGdbIc"
     },
     {
       "_id": "u3MHXGst7LKD7S8q",
@@ -1070,10 +1239,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.u3MHXGst7LKD7S8q"
     },
     {
       "_id": "043StxEhiFsC3hkL",
@@ -1103,10 +1276,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.043StxEhiFsC3hkL"
     },
     {
       "_id": "RPB9SqhxtwEZ5DIM",
@@ -1136,10 +1313,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.RPB9SqhxtwEZ5DIM"
     },
     {
       "_id": "1eUzLWvtuhbyrOJ5",
@@ -1169,10 +1350,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.1eUzLWvtuhbyrOJ5"
     },
     {
       "_id": "VQ4uSqDRJUagM57j",
@@ -1202,10 +1387,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.VQ4uSqDRJUagM57j"
     },
     {
       "_id": "ep4l83NnWxEzwK7F",
@@ -1235,10 +1424,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.ep4l83NnWxEzwK7F"
     },
     {
       "_id": "Wb2yp5cgQUuyrtGw",
@@ -1268,10 +1461,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.Wb2yp5cgQUuyrtGw"
     },
     {
       "_id": "P7wUOWrsyaibpR5e",
@@ -1301,10 +1498,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.P7wUOWrsyaibpR5e"
     },
     {
       "_id": "sOsl0oEXmJyYa9Lo",
@@ -1334,10 +1535,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.sOsl0oEXmJyYa9Lo"
     },
     {
       "_id": "8heAxf4t12dD29zb",
@@ -1367,10 +1572,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.8heAxf4t12dD29zb"
     },
     {
       "_id": "jEUBx0Xbdzjx9VtQ",
@@ -1400,10 +1609,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.jEUBx0Xbdzjx9VtQ"
     },
     {
       "_id": "TRstw9RPZFKX2uWr",
@@ -1433,10 +1646,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.TRstw9RPZFKX2uWr"
     },
     {
       "_id": "E5pzrvCiQCVkHYoY",
@@ -1466,10 +1683,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.E5pzrvCiQCVkHYoY"
     },
     {
       "_id": "ROqe1VHnSzkU6ucQ",
@@ -1499,10 +1720,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.ROqe1VHnSzkU6ucQ"
     },
     {
       "_id": "XMvkpUfA1NX5FjVV",
@@ -1532,10 +1757,14 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.XMvkpUfA1NX5FjVV"
     },
     {
       "_id": "sgmLAaGWbvB6Zuqs",
@@ -1565,32 +1794,19 @@
         "saturation": 0,
         "contrast": 0,
         "shadows": 0,
-        "attenuation": 0.5
+        "attenuation": 0.5,
+        "negative": false,
+        "priority": 0
       },
       "hidden": false,
-      "flags": {}
+      "flags": {},
+      "elevation": 0,
+      "_key": "!scenes.lights!ARBUoOUtU4iMFPHn.sgmLAaGWbvB6Zuqs"
     }
   ],
   "notes": [],
   "sounds": [],
-  "templates": [
-    {
-      "_id": "Evsg9Lg339pVb4wf",
-      "user": null,
-      "t": "circle",
-      "x": 0,
-      "y": 0,
-      "distance": 1,
-      "direction": 0,
-      "angle": 0,
-      "width": 1,
-      "borderColor": "#000000",
-      "fillColor": "#FF0000",
-      "flags": {},
-      "texture": null,
-      "hidden": false
-    }
-  ],
+  "templates": [],
   "tiles": [
     {
       "_id": "glLTd1VPOdCNvesg",
@@ -1598,16 +1814,13 @@
       "height": 3000,
       "x": 1650,
       "y": 2250,
-      "z": 100,
       "rotation": 0,
       "alpha": 1,
       "hidden": false,
       "locked": false,
-      "overhead": true,
       "occlusion": {
         "mode": 1,
-        "alpha": 0,
-        "radius": null
+        "alpha": 0
       },
       "video": {
         "loop": true,
@@ -1617,14 +1830,24 @@
       "flags": {},
       "texture": {
         "src": "modules/headshot-theatre-district/artwork/theatre-roof-balcony-150px.webp",
-        "tint": null,
+        "tint": "#ffffff",
         "scaleX": 1,
         "scaleY": 1,
         "offsetX": 0,
         "offsetY": 0,
-        "rotation": 0
+        "rotation": 0,
+        "anchorX": 0.5,
+        "anchorY": 0.5,
+        "fit": "fill",
+        "alphaThreshold": 0.75
       },
-      "roof": true
+      "elevation": 20,
+      "sort": 100,
+      "restrictions": {
+        "light": true,
+        "weather": true
+      },
+      "_key": "!scenes.tiles!ARBUoOUtU4iMFPHn.glLTd1VPOdCNvesg"
     },
     {
       "_id": "S8Fw0sokhEK4MZ2y",
@@ -1632,16 +1855,13 @@
       "height": 1800,
       "x": 3900,
       "y": 2250,
-      "z": 100,
       "rotation": 0,
       "alpha": 1,
       "hidden": false,
       "locked": false,
-      "overhead": true,
       "occlusion": {
         "mode": 1,
-        "alpha": 0,
-        "radius": null
+        "alpha": 0
       },
       "video": {
         "loop": true,
@@ -1651,14 +1871,24 @@
       "flags": {},
       "texture": {
         "src": "modules/headshot-theatre-district/artwork/directors-house-roof-150px.webp",
-        "tint": null,
+        "tint": "#ffffff",
         "scaleX": 1,
         "scaleY": 1,
         "offsetX": 0,
         "offsetY": 0,
-        "rotation": 0
+        "rotation": 0,
+        "anchorX": 0.5,
+        "anchorY": 0.5,
+        "fit": "fill",
+        "alphaThreshold": 0.75
       },
-      "roof": true
+      "elevation": 20,
+      "sort": 100,
+      "restrictions": {
+        "light": true,
+        "weather": true
+      },
+      "_key": "!scenes.tiles!ARBUoOUtU4iMFPHn.S8Fw0sokhEK4MZ2y"
     },
     {
       "_id": "0w2wvfShT9EZjFDq",
@@ -1666,16 +1896,13 @@
       "height": 600,
       "x": 5550,
       "y": 3150,
-      "z": 100,
       "rotation": 0,
       "alpha": 1,
       "hidden": false,
       "locked": false,
-      "overhead": true,
       "occlusion": {
         "mode": 1,
-        "alpha": 0,
-        "radius": null
+        "alpha": 0
       },
       "video": {
         "loop": true,
@@ -1685,14 +1912,24 @@
       "flags": {},
       "texture": {
         "src": "modules/headshot-theatre-district/artwork/shed-roof-150px.webp",
-        "tint": null,
+        "tint": "#ffffff",
         "scaleX": 1,
         "scaleY": 1,
         "offsetX": 0,
         "offsetY": 0,
-        "rotation": 0
+        "rotation": 0,
+        "anchorX": 0.5,
+        "anchorY": 0.5,
+        "fit": "fill",
+        "alphaThreshold": 0.75
       },
-      "roof": true
+      "elevation": 20,
+      "sort": 100,
+      "restrictions": {
+        "light": true,
+        "weather": true
+      },
+      "_key": "!scenes.tiles!ARBUoOUtU4iMFPHn.0w2wvfShT9EZjFDq"
     },
     {
       "_id": "2bQ6yIcITIab7ZEW",
@@ -1700,16 +1937,13 @@
       "height": 1950,
       "x": 1650,
       "y": 5550,
-      "z": 100,
       "rotation": 0,
       "alpha": 1,
       "hidden": false,
       "locked": false,
-      "overhead": true,
       "occlusion": {
         "mode": 1,
-        "alpha": 0,
-        "radius": null
+        "alpha": 0
       },
       "video": {
         "loop": true,
@@ -1719,14 +1953,24 @@
       "flags": {},
       "texture": {
         "src": "modules/headshot-theatre-district/artwork/cafe-roof-150px.webp",
-        "tint": null,
+        "tint": "#ffffff",
         "scaleX": 1,
         "scaleY": 1,
         "offsetX": 0,
         "offsetY": 0,
-        "rotation": 0
+        "rotation": 0,
+        "anchorX": 0.5,
+        "anchorY": 0.5,
+        "fit": "fill",
+        "alphaThreshold": 0.75
       },
-      "roof": true
+      "elevation": 20,
+      "sort": 100,
+      "restrictions": {
+        "light": true,
+        "weather": true
+      },
+      "_key": "!scenes.tiles!ARBUoOUtU4iMFPHn.2bQ6yIcITIab7ZEW"
     },
     {
       "_id": "SPQRC0Sye4o9FoB2",
@@ -1734,16 +1978,13 @@
       "height": 1950,
       "x": 2700,
       "y": 5550,
-      "z": 100,
       "rotation": 0,
       "alpha": 1,
       "hidden": false,
       "locked": false,
-      "overhead": true,
       "occlusion": {
         "mode": 1,
-        "alpha": 0,
-        "radius": null
+        "alpha": 0
       },
       "video": {
         "loop": true,
@@ -1753,14 +1994,24 @@
       "flags": {},
       "texture": {
         "src": "modules/headshot-theatre-district/artwork/gunshop-roof-150px.webp",
-        "tint": null,
+        "tint": "#ffffff",
         "scaleX": 1,
         "scaleY": 1,
         "offsetX": 0,
         "offsetY": 0,
-        "rotation": 0
+        "rotation": 0,
+        "anchorX": 0.5,
+        "anchorY": 0.5,
+        "fit": "fill",
+        "alphaThreshold": 0.75
       },
-      "roof": true
+      "elevation": 20,
+      "sort": 100,
+      "restrictions": {
+        "light": true,
+        "weather": true
+      },
+      "_key": "!scenes.tiles!ARBUoOUtU4iMFPHn.SPQRC0Sye4o9FoB2"
     },
     {
       "_id": "bRYtSZ5QQ1xRGROk",
@@ -1768,16 +2019,13 @@
       "height": 1950,
       "x": 4350,
       "y": 5550,
-      "z": 100,
       "rotation": 0,
       "alpha": 1,
       "hidden": false,
       "locked": false,
-      "overhead": true,
       "occlusion": {
         "mode": 1,
-        "alpha": 0,
-        "radius": null
+        "alpha": 0
       },
       "video": {
         "loop": true,
@@ -1787,14 +2035,24 @@
       "flags": {},
       "texture": {
         "src": "modules/headshot-theatre-district/artwork/powderhorn-roof-150px.webp",
-        "tint": null,
+        "tint": "#ffffff",
         "scaleX": 1,
         "scaleY": 1,
         "offsetX": 0,
         "offsetY": 0,
-        "rotation": 0
+        "rotation": 0,
+        "anchorX": 0.5,
+        "anchorY": 0.5,
+        "fit": "fill",
+        "alphaThreshold": 0.75
       },
-      "roof": true
+      "elevation": 20,
+      "sort": 100,
+      "restrictions": {
+        "light": true,
+        "weather": true
+      },
+      "_key": "!scenes.tiles!ARBUoOUtU4iMFPHn.bRYtSZ5QQ1xRGROk"
     }
   ],
   "walls": [
@@ -1813,7 +2071,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.q9y3h6UuQyhjnhNA"
     },
     {
       "_id": "JLgGoXh1XqK162FL",
@@ -1830,7 +2096,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.JLgGoXh1XqK162FL"
     },
     {
       "_id": "8duaj77TGctU48C3",
@@ -1847,7 +2121,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.8duaj77TGctU48C3"
     },
     {
       "_id": "wJerPV0EI6FiuwGh",
@@ -1864,7 +2146,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.wJerPV0EI6FiuwGh"
     },
     {
       "_id": "PruDgjIAFTh8ccDh",
@@ -1881,7 +2171,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.PruDgjIAFTh8ccDh"
     },
     {
       "_id": "7Xa2gPFwIprEjy8a",
@@ -1898,7 +2196,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.7Xa2gPFwIprEjy8a"
     },
     {
       "_id": "om5fZEVAdALZF5ll",
@@ -1915,7 +2221,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.om5fZEVAdALZF5ll"
     },
     {
       "_id": "NWFCabdaRbVDX3b4",
@@ -1932,7 +2246,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.NWFCabdaRbVDX3b4"
     },
     {
       "_id": "OO09AIQ1UoerfQ5G",
@@ -1949,7 +2271,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.OO09AIQ1UoerfQ5G"
     },
     {
       "_id": "ogJMiqjnXCk3Xk9c",
@@ -1966,7 +2296,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.ogJMiqjnXCk3Xk9c"
     },
     {
       "_id": "okBX3xG8W6geUZY5",
@@ -1983,7 +2321,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.okBX3xG8W6geUZY5"
     },
     {
       "_id": "750XMSSlz1wYqvkD",
@@ -2000,7 +2346,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.750XMSSlz1wYqvkD"
     },
     {
       "_id": "GWXa0HRSZKVDDTGl",
@@ -2017,7 +2371,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.GWXa0HRSZKVDDTGl"
     },
     {
       "_id": "rg6EQpZF6w362E5W",
@@ -2034,7 +2396,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.rg6EQpZF6w362E5W"
     },
     {
       "_id": "dELxzr8k3o2P2zl9",
@@ -2051,7 +2421,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.dELxzr8k3o2P2zl9"
     },
     {
       "_id": "yASDghEtXYKvMPW9",
@@ -2068,7 +2446,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.yASDghEtXYKvMPW9"
     },
     {
       "_id": "JQE7UutBYDPOXW4l",
@@ -2085,7 +2471,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.JQE7UutBYDPOXW4l"
     },
     {
       "_id": "b3tW6wBWQAYuwf3E",
@@ -2102,7 +2496,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.b3tW6wBWQAYuwf3E"
     },
     {
       "_id": "uUT0yydisnvPybUl",
@@ -2119,7 +2521,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.uUT0yydisnvPybUl"
     },
     {
       "_id": "Kn64co5RW5zxgYuh",
@@ -2136,7 +2546,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.Kn64co5RW5zxgYuh"
     },
     {
       "_id": "LPJYgv2aQTsz6XQB",
@@ -2153,7 +2571,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.LPJYgv2aQTsz6XQB"
     },
     {
       "_id": "2ldMRDIeB0XRo4US",
@@ -2170,7 +2596,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.2ldMRDIeB0XRo4US"
     },
     {
       "_id": "dR9Kv5S3VVmJE3Hs",
@@ -2187,7 +2621,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.dR9Kv5S3VVmJE3Hs"
     },
     {
       "_id": "Vjo4vp7RC1gWTtEx",
@@ -2204,7 +2646,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.Vjo4vp7RC1gWTtEx"
     },
     {
       "_id": "o9pfqVm7NL7wzW2Z",
@@ -2221,7 +2671,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.o9pfqVm7NL7wzW2Z"
     },
     {
       "_id": "xKav3V7iqUmi9laf",
@@ -2238,7 +2696,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.xKav3V7iqUmi9laf"
     },
     {
       "_id": "m1Kj330vZQWVcyXg",
@@ -2255,7 +2721,15 @@
       "dir": 0,
       "door": 1,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.m1Kj330vZQWVcyXg"
     },
     {
       "_id": "JZK1N7hyzhP2e9gk",
@@ -2272,7 +2746,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.JZK1N7hyzhP2e9gk"
     },
     {
       "_id": "ve71LxmeurbCZQaJ",
@@ -2289,7 +2771,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.ve71LxmeurbCZQaJ"
     },
     {
       "_id": "YoFbfDfGY8ykEKCr",
@@ -2306,7 +2796,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.YoFbfDfGY8ykEKCr"
     },
     {
       "_id": "2u3egAmQNoOyV9D9",
@@ -2323,7 +2821,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.2u3egAmQNoOyV9D9"
     },
     {
       "_id": "mgFbXP0abrmn4d1i",
@@ -2340,7 +2846,15 @@
       "dir": 0,
       "door": 1,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.mgFbXP0abrmn4d1i"
     },
     {
       "_id": "Jf6xQZ0YAXL2204K",
@@ -2357,7 +2871,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.Jf6xQZ0YAXL2204K"
     },
     {
       "_id": "5m6bg14ekUoIJ0yW",
@@ -2374,7 +2896,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.5m6bg14ekUoIJ0yW"
     },
     {
       "_id": "XzqwjjwKKYzRKKhy",
@@ -2391,7 +2921,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.XzqwjjwKKYzRKKhy"
     },
     {
       "_id": "uMTiJZL3DRLQrOJo",
@@ -2408,7 +2946,15 @@
       "dir": 0,
       "door": 1,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.uMTiJZL3DRLQrOJo"
     },
     {
       "_id": "O2DiOEhNIms5MFTL",
@@ -2425,7 +2971,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.O2DiOEhNIms5MFTL"
     },
     {
       "_id": "zA7c3NxIz8z1joL1",
@@ -2442,7 +2996,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.zA7c3NxIz8z1joL1"
     },
     {
       "_id": "bVfPTOkeFEBLin9j",
@@ -2459,7 +3021,15 @@
       "dir": 0,
       "door": 1,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.bVfPTOkeFEBLin9j"
     },
     {
       "_id": "qFESisuqKUejKYRd",
@@ -2476,7 +3046,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.qFESisuqKUejKYRd"
     },
     {
       "_id": "EcqVScjdPsFTV1ru",
@@ -2493,7 +3071,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.EcqVScjdPsFTV1ru"
     },
     {
       "_id": "DPEvwdBw8GmgDfc3",
@@ -2510,7 +3096,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.DPEvwdBw8GmgDfc3"
     },
     {
       "_id": "usWnKE0ZnTShERgd",
@@ -2527,7 +3121,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.usWnKE0ZnTShERgd"
     },
     {
       "_id": "PTmOEyCQ14r4dCoq",
@@ -2544,7 +3146,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.PTmOEyCQ14r4dCoq"
     },
     {
       "_id": "ci7ApiMIgoL3G1Td",
@@ -2561,7 +3171,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.ci7ApiMIgoL3G1Td"
     },
     {
       "_id": "Z96SQjOgtNKJZRN3",
@@ -2578,7 +3196,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.Z96SQjOgtNKJZRN3"
     },
     {
       "_id": "bdJedYVX9Men40Aq",
@@ -2595,7 +3221,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.bdJedYVX9Men40Aq"
     },
     {
       "_id": "R4sc7kcGumf4YSZT",
@@ -2612,7 +3246,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.R4sc7kcGumf4YSZT"
     },
     {
       "_id": "ugfZcsr7v8OSI25u",
@@ -2629,7 +3271,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.ugfZcsr7v8OSI25u"
     },
     {
       "_id": "D9VhOkLolif4OO9U",
@@ -2646,7 +3296,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.D9VhOkLolif4OO9U"
     },
     {
       "_id": "b7GqUxQAMjbthZp0",
@@ -2663,7 +3321,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.b7GqUxQAMjbthZp0"
     },
     {
       "_id": "Xv3k6NbOKOgfFiQY",
@@ -2680,7 +3346,15 @@
       "dir": 0,
       "door": 1,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.Xv3k6NbOKOgfFiQY"
     },
     {
       "_id": "ZzBWOF96ltQB7gJA",
@@ -2697,7 +3371,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.ZzBWOF96ltQB7gJA"
     },
     {
       "_id": "wZ1ZPvxsVlz3vNP4",
@@ -2714,7 +3396,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.wZ1ZPvxsVlz3vNP4"
     },
     {
       "_id": "ftlsPnEdZrWpVv3s",
@@ -2731,7 +3421,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.ftlsPnEdZrWpVv3s"
     },
     {
       "_id": "020jyOEWfhJg6Ueb",
@@ -2748,7 +3446,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.020jyOEWfhJg6Ueb"
     },
     {
       "_id": "eazZTrO2oBqJAu62",
@@ -2765,7 +3471,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.eazZTrO2oBqJAu62"
     },
     {
       "_id": "TZgiRoW2XkrDytIS",
@@ -2782,7 +3496,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.TZgiRoW2XkrDytIS"
     },
     {
       "_id": "2QizEzfLNfmqUPBM",
@@ -2799,7 +3521,15 @@
       "dir": 0,
       "door": 1,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.2QizEzfLNfmqUPBM"
     },
     {
       "_id": "ViM5rkzJVhv6OBOy",
@@ -2816,7 +3546,15 @@
       "dir": 0,
       "door": 1,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.ViM5rkzJVhv6OBOy"
     },
     {
       "_id": "wX66TfZdYrBPLfPZ",
@@ -2833,7 +3571,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.wX66TfZdYrBPLfPZ"
     },
     {
       "_id": "s6U7ogWA78jpHj45",
@@ -2850,7 +3596,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.s6U7ogWA78jpHj45"
     },
     {
       "_id": "OXLWtQAt6QlV4zhQ",
@@ -2867,7 +3621,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.OXLWtQAt6QlV4zhQ"
     },
     {
       "_id": "sjO5ks1tuJazQgwK",
@@ -2884,7 +3646,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.sjO5ks1tuJazQgwK"
     },
     {
       "_id": "Q2qzU4FcQDfP0wbu",
@@ -2901,7 +3671,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.Q2qzU4FcQDfP0wbu"
     },
     {
       "_id": "24FBlJNu03ScmExh",
@@ -2918,7 +3696,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.24FBlJNu03ScmExh"
     },
     {
       "_id": "At6NUIiDetiUnvHY",
@@ -2935,7 +3721,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.At6NUIiDetiUnvHY"
     },
     {
       "_id": "q7wqrz5AcEIvex04",
@@ -2952,7 +3746,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.q7wqrz5AcEIvex04"
     },
     {
       "_id": "t0DhV6lgh1D0vF0Y",
@@ -2969,7 +3771,15 @@
       "dir": 0,
       "door": 1,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.t0DhV6lgh1D0vF0Y"
     },
     {
       "_id": "cMbBfb7RLbTA1iko",
@@ -2986,7 +3796,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.cMbBfb7RLbTA1iko"
     },
     {
       "_id": "8N4LRKdQJqLkWWLn",
@@ -3003,7 +3821,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.8N4LRKdQJqLkWWLn"
     },
     {
       "_id": "8lYgZB8ZGWJEJ394",
@@ -3020,7 +3846,15 @@
       "dir": 0,
       "door": 1,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.8lYgZB8ZGWJEJ394"
     },
     {
       "_id": "R8CTDT2uPnZI3nL5",
@@ -3037,7 +3871,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.R8CTDT2uPnZI3nL5"
     },
     {
       "_id": "FwBArkG9GUt10ls5",
@@ -3054,7 +3896,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.FwBArkG9GUt10ls5"
     },
     {
       "_id": "cASJT2H94C11s5uq",
@@ -3071,7 +3921,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.cASJT2H94C11s5uq"
     },
     {
       "_id": "Bsevi4YbDaYRgUFq",
@@ -3088,7 +3946,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.Bsevi4YbDaYRgUFq"
     },
     {
       "_id": "GcTNJ8KnqENmlugM",
@@ -3105,7 +3971,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.GcTNJ8KnqENmlugM"
     },
     {
       "_id": "J25DotX7jfNiymQo",
@@ -3122,7 +3996,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.J25DotX7jfNiymQo"
     },
     {
       "_id": "qSRPozblpoHOnTSv",
@@ -3139,7 +4021,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.qSRPozblpoHOnTSv"
     },
     {
       "_id": "FyxGZSgMlPBEl15A",
@@ -3156,7 +4046,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.FyxGZSgMlPBEl15A"
     },
     {
       "_id": "Kp2pEBSOHBhTvQNI",
@@ -3173,7 +4071,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.Kp2pEBSOHBhTvQNI"
     },
     {
       "_id": "linKQlPqPl1FKXWp",
@@ -3190,7 +4096,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.linKQlPqPl1FKXWp"
     },
     {
       "_id": "cCqIRB13Ko4WcCve",
@@ -3207,7 +4121,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.cCqIRB13Ko4WcCve"
     },
     {
       "_id": "1C1vaUiY53l0wWob",
@@ -3224,7 +4146,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.1C1vaUiY53l0wWob"
     },
     {
       "_id": "entBWasC0cni7AK8",
@@ -3241,7 +4171,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.entBWasC0cni7AK8"
     },
     {
       "_id": "xnLZf7MQPHhDmsDJ",
@@ -3258,7 +4196,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.xnLZf7MQPHhDmsDJ"
     },
     {
       "_id": "SOoHvP1p7bIfh8wl",
@@ -3275,7 +4221,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.SOoHvP1p7bIfh8wl"
     },
     {
       "_id": "hP3Tpse77CiVncuE",
@@ -3292,7 +4246,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.hP3Tpse77CiVncuE"
     },
     {
       "_id": "Yxd6pvLzTi6Fxz0b",
@@ -3309,7 +4271,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.Yxd6pvLzTi6Fxz0b"
     },
     {
       "_id": "CZ9yoCGqcsBYin3G",
@@ -3326,7 +4296,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.CZ9yoCGqcsBYin3G"
     },
     {
       "_id": "0IOfCl4TbtER8YG5",
@@ -3343,7 +4321,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.0IOfCl4TbtER8YG5"
     },
     {
       "_id": "zbhNXGviNFfODI6k",
@@ -3360,7 +4346,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.zbhNXGviNFfODI6k"
     },
     {
       "_id": "YV8qTTOvynO4kNir",
@@ -3377,7 +4371,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.YV8qTTOvynO4kNir"
     },
     {
       "_id": "u7KXhJkB953fmGF2",
@@ -3394,7 +4396,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.u7KXhJkB953fmGF2"
     },
     {
       "_id": "wwZH2PdxNwVhRo5i",
@@ -3411,7 +4421,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.wwZH2PdxNwVhRo5i"
     },
     {
       "_id": "vOgwWvwS1mYcalls",
@@ -3428,7 +4446,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.vOgwWvwS1mYcalls"
     },
     {
       "_id": "udOTlrNRSuPsHfVg",
@@ -3445,7 +4471,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.udOTlrNRSuPsHfVg"
     },
     {
       "_id": "pYmzbTuJ2xiblAcG",
@@ -3462,7 +4496,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.pYmzbTuJ2xiblAcG"
     },
     {
       "_id": "PqX7Zg0LfrlYcxBV",
@@ -3479,7 +4521,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.PqX7Zg0LfrlYcxBV"
     },
     {
       "_id": "xJ0gftv5t6CwzBOg",
@@ -3496,7 +4546,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.xJ0gftv5t6CwzBOg"
     },
     {
       "_id": "t67fIt1Da69L1PY5",
@@ -3513,7 +4571,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.t67fIt1Da69L1PY5"
     },
     {
       "_id": "UGHNKUmbGxRDN2bL",
@@ -3530,7 +4596,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.UGHNKUmbGxRDN2bL"
     },
     {
       "_id": "pX6t1iLK3vQiQkpp",
@@ -3547,7 +4621,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.pX6t1iLK3vQiQkpp"
     },
     {
       "_id": "mLgAXtgqX31JLDKG",
@@ -3564,7 +4646,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.mLgAXtgqX31JLDKG"
     },
     {
       "_id": "YrQmlkxtPR3GJkao",
@@ -3581,7 +4671,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.YrQmlkxtPR3GJkao"
     },
     {
       "_id": "lHJVr0HaCZxlAEtV",
@@ -3598,7 +4696,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.lHJVr0HaCZxlAEtV"
     },
     {
       "_id": "XOat5PbVRa2RRVPv",
@@ -3615,7 +4721,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.XOat5PbVRa2RRVPv"
     },
     {
       "_id": "En5IwoXoFrIvPRFN",
@@ -3632,7 +4746,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.En5IwoXoFrIvPRFN"
     },
     {
       "_id": "4HdwBwnogPfH70lb",
@@ -3649,7 +4771,15 @@
       "dir": 0,
       "door": 1,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.4HdwBwnogPfH70lb"
     },
     {
       "_id": "4to4xpLn0naMqFjP",
@@ -3666,7 +4796,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.4to4xpLn0naMqFjP"
     },
     {
       "_id": "mSHN30sDLJ4NUCYk",
@@ -3683,7 +4821,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.mSHN30sDLJ4NUCYk"
     },
     {
       "_id": "HPaiqF76WKi0tknw",
@@ -3700,7 +4846,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.HPaiqF76WKi0tknw"
     },
     {
       "_id": "4lsubWGwLNMOtRpt",
@@ -3717,7 +4871,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.4lsubWGwLNMOtRpt"
     },
     {
       "_id": "LcjNi9fgQT4pNiPt",
@@ -3734,7 +4896,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.LcjNi9fgQT4pNiPt"
     },
     {
       "_id": "6BjlksDx3TELv8V8",
@@ -3751,7 +4921,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.6BjlksDx3TELv8V8"
     },
     {
       "_id": "m3IYciqqNBWZ89OC",
@@ -3768,7 +4946,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.m3IYciqqNBWZ89OC"
     },
     {
       "_id": "z4ya8AztS7k2hh9D",
@@ -3785,7 +4971,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.z4ya8AztS7k2hh9D"
     },
     {
       "_id": "z6S9nRYGupOx6WN6",
@@ -3802,7 +4996,15 @@
       "dir": 0,
       "door": 1,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.z6S9nRYGupOx6WN6"
     },
     {
       "_id": "VHRWW9hLbvjpmh8m",
@@ -3819,7 +5021,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.VHRWW9hLbvjpmh8m"
     },
     {
       "_id": "XUnBVrDyeZuYnPPs",
@@ -3836,7 +5046,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.XUnBVrDyeZuYnPPs"
     },
     {
       "_id": "7nuTNhvRlu9votxT",
@@ -3853,7 +5071,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.7nuTNhvRlu9votxT"
     },
     {
       "_id": "dxUS1r4ouJUBaLag",
@@ -3870,7 +5096,15 @@
       "dir": 0,
       "door": 1,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.dxUS1r4ouJUBaLag"
     },
     {
       "_id": "v41T7C6OOoljlWpk",
@@ -3887,7 +5121,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.v41T7C6OOoljlWpk"
     },
     {
       "_id": "ARniLuJO97VFtFOA",
@@ -3904,7 +5146,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.ARniLuJO97VFtFOA"
     },
     {
       "_id": "DrXjxCLtD9C6N6GC",
@@ -3921,7 +5171,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.DrXjxCLtD9C6N6GC"
     },
     {
       "_id": "ozGZGeJ6e5DAHlik",
@@ -3938,7 +5196,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.ozGZGeJ6e5DAHlik"
     },
     {
       "_id": "36UnNU3ynqKCVJJi",
@@ -3955,7 +5221,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.36UnNU3ynqKCVJJi"
     },
     {
       "_id": "ppyXMS8Ty6Y2bocq",
@@ -3972,7 +5246,15 @@
       "dir": 0,
       "door": 1,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.ppyXMS8Ty6Y2bocq"
     },
     {
       "_id": "jPJvzWi0NqLRvmtr",
@@ -3989,7 +5271,15 @@
       "dir": 0,
       "door": 1,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.jPJvzWi0NqLRvmtr"
     },
     {
       "_id": "LubzswRVCosTzV52",
@@ -4006,7 +5296,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.LubzswRVCosTzV52"
     },
     {
       "_id": "Cxf9RARTKmy5GuSp",
@@ -4023,7 +5321,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.Cxf9RARTKmy5GuSp"
     },
     {
       "_id": "YUPQ1NTqBstAPIgA",
@@ -4040,7 +5346,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.YUPQ1NTqBstAPIgA"
     },
     {
       "_id": "HNTzqzoAFAL15Z8w",
@@ -4057,7 +5371,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.HNTzqzoAFAL15Z8w"
     },
     {
       "_id": "71lxWsoarvyFyE6e",
@@ -4074,7 +5396,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.71lxWsoarvyFyE6e"
     },
     {
       "_id": "uAv4VW0dfltU6PGi",
@@ -4091,7 +5421,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.uAv4VW0dfltU6PGi"
     },
     {
       "_id": "oSReaz3XM6Ob5qgp",
@@ -4108,7 +5446,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.oSReaz3XM6Ob5qgp"
     },
     {
       "_id": "WxRsJnDoxIh3uvIy",
@@ -4125,7 +5471,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.WxRsJnDoxIh3uvIy"
     },
     {
       "_id": "71IaEkkiJANEUFzd",
@@ -4142,7 +5496,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.71IaEkkiJANEUFzd"
     },
     {
       "_id": "yyCiYK6tZsYkAN9X",
@@ -4159,7 +5521,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.yyCiYK6tZsYkAN9X"
     },
     {
       "_id": "N9N3xANCXq5BTkP8",
@@ -4176,7 +5546,15 @@
       "dir": 0,
       "door": 1,
       "ds": 1,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.N9N3xANCXq5BTkP8"
     },
     {
       "_id": "5W6Cw8QmpzWWz1bn",
@@ -4193,7 +5571,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.5W6Cw8QmpzWWz1bn"
     },
     {
       "_id": "yYFamR7D5XCI0cKd",
@@ -4210,7 +5596,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.yYFamR7D5XCI0cKd"
     },
     {
       "_id": "Y7LZGhz01x2qfKC0",
@@ -4227,7 +5621,15 @@
       "dir": 0,
       "door": 1,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.Y7LZGhz01x2qfKC0"
     },
     {
       "_id": "CHbvkNqOQQ9JjCNs",
@@ -4244,7 +5646,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.CHbvkNqOQQ9JjCNs"
     },
     {
       "_id": "LLKvl96RizldipFl",
@@ -4261,7 +5671,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.LLKvl96RizldipFl"
     },
     {
       "_id": "HhWhKxFFHGdPQjL9",
@@ -4278,7 +5696,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.HhWhKxFFHGdPQjL9"
     },
     {
       "_id": "9lqO9SryNk8KqKnk",
@@ -4295,7 +5721,15 @@
       "dir": 0,
       "door": 1,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.9lqO9SryNk8KqKnk"
     },
     {
       "_id": "kAMdjzrKJB9nUin4",
@@ -4312,7 +5746,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.kAMdjzrKJB9nUin4"
     },
     {
       "_id": "v7aURuSV7nHgv5QH",
@@ -4329,7 +5771,15 @@
       "dir": 0,
       "door": 1,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.v7aURuSV7nHgv5QH"
     },
     {
       "_id": "9CYiyVWEhlngdxSB",
@@ -4346,7 +5796,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.9CYiyVWEhlngdxSB"
     },
     {
       "_id": "xginmMS8CZruSWiP",
@@ -4363,7 +5821,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.xginmMS8CZruSWiP"
     },
     {
       "_id": "4YHzLJLZF94OG400",
@@ -4380,7 +5846,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.4YHzLJLZF94OG400"
     },
     {
       "_id": "ukUQNVUFDV70WbYu",
@@ -4397,7 +5871,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.ukUQNVUFDV70WbYu"
     },
     {
       "_id": "PySQJGFfCnsbFnsF",
@@ -4414,7 +5896,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.PySQJGFfCnsbFnsF"
     },
     {
       "_id": "8CTRhwQ5jU6S9ybD",
@@ -4431,7 +5921,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.8CTRhwQ5jU6S9ybD"
     },
     {
       "_id": "3B92eyEC2RgaiI5V",
@@ -4448,7 +5946,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.3B92eyEC2RgaiI5V"
     },
     {
       "_id": "3yA4kk4h1OOJ7vTi",
@@ -4465,7 +5971,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.3yA4kk4h1OOJ7vTi"
     },
     {
       "_id": "uNwjBUS4qmIEBGvm",
@@ -4482,7 +5996,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.uNwjBUS4qmIEBGvm"
     },
     {
       "_id": "qCOymeznSXPAbvG2",
@@ -4499,7 +6021,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.qCOymeznSXPAbvG2"
     },
     {
       "_id": "wKS6WC4xr2X9Bybj",
@@ -4516,7 +6046,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.wKS6WC4xr2X9Bybj"
     },
     {
       "_id": "BaQerdZ6GovvaxQs",
@@ -4533,7 +6071,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.BaQerdZ6GovvaxQs"
     },
     {
       "_id": "vmXsEPOVMJbQ04Ae",
@@ -4550,7 +6096,15 @@
       "dir": 0,
       "door": 1,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.vmXsEPOVMJbQ04Ae"
     },
     {
       "_id": "jMWNYCAE9GG33sQf",
@@ -4567,7 +6121,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.jMWNYCAE9GG33sQf"
     },
     {
       "_id": "TFXEKzHFyoNVvjMg",
@@ -4584,7 +6146,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.TFXEKzHFyoNVvjMg"
     },
     {
       "_id": "K0odZF4jQMji89Xw",
@@ -4601,7 +6171,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.K0odZF4jQMji89Xw"
     },
     {
       "_id": "lZzEgVJLTuOUbgbW",
@@ -4618,7 +6196,15 @@
       "dir": 0,
       "door": 1,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.lZzEgVJLTuOUbgbW"
     },
     {
       "_id": "Iz2kLZoYJxKDACh1",
@@ -4635,7 +6221,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.Iz2kLZoYJxKDACh1"
     },
     {
       "_id": "qFp1rU4fuClKKyY7",
@@ -4652,7 +6246,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.qFp1rU4fuClKKyY7"
     },
     {
       "_id": "3tzJasGAtGBCWd5z",
@@ -4669,7 +6271,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.3tzJasGAtGBCWd5z"
     },
     {
       "_id": "RMDcQpB7Gao1xYpR",
@@ -4686,7 +6296,15 @@
       "dir": 0,
       "door": 1,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.RMDcQpB7Gao1xYpR"
     },
     {
       "_id": "86YoqDlL0gNoq1yG",
@@ -4703,7 +6321,15 @@
       "dir": 0,
       "door": 1,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.86YoqDlL0gNoq1yG"
     },
     {
       "_id": "Fh5HF8MgmyYV51Di",
@@ -4720,7 +6346,15 @@
       "dir": 0,
       "door": 1,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.Fh5HF8MgmyYV51Di"
     },
     {
       "_id": "YcSUUAdYBGXzkSvk",
@@ -4737,7 +6371,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.YcSUUAdYBGXzkSvk"
     },
     {
       "_id": "8OCn6OA19SPxCk2r",
@@ -4754,7 +6396,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.8OCn6OA19SPxCk2r"
     },
     {
       "_id": "xxhFGyaEQ5OSrRIb",
@@ -4771,7 +6421,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.xxhFGyaEQ5OSrRIb"
     },
     {
       "_id": "X0BMSfHYbxIc2p5P",
@@ -4788,7 +6446,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.X0BMSfHYbxIc2p5P"
     },
     {
       "_id": "eW61u31zNDzKZW4N",
@@ -4805,7 +6471,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.eW61u31zNDzKZW4N"
     },
     {
       "_id": "XWSgKFIistd9AU0H",
@@ -4822,7 +6496,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.XWSgKFIistd9AU0H"
     },
     {
       "_id": "U6A7keTvUjkN26YC",
@@ -4839,7 +6521,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.U6A7keTvUjkN26YC"
     },
     {
       "_id": "VQTucILi0yEutLdI",
@@ -4856,7 +6546,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.VQTucILi0yEutLdI"
     },
     {
       "_id": "99vWkF8GI9MGuKOl",
@@ -4873,7 +6571,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.99vWkF8GI9MGuKOl"
     },
     {
       "_id": "Rk2J9R6AwMWBWDp4",
@@ -4890,7 +6596,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.Rk2J9R6AwMWBWDp4"
     },
     {
       "_id": "nc3S1GZRUTsEaU19",
@@ -4907,7 +6621,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.nc3S1GZRUTsEaU19"
     },
     {
       "_id": "yLlmRtnEbdvrOPDt",
@@ -4924,7 +6646,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.yLlmRtnEbdvrOPDt"
     },
     {
       "_id": "U25El59CS0kTDVj7",
@@ -4941,7 +6671,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.U25El59CS0kTDVj7"
     },
     {
       "_id": "bWPP9IQSJjYAOFY3",
@@ -4958,7 +6696,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.bWPP9IQSJjYAOFY3"
     },
     {
       "_id": "CLGkURN6Pe9juz6n",
@@ -4975,7 +6721,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.CLGkURN6Pe9juz6n"
     },
     {
       "_id": "Fg4l1RGiXzEWc52R",
@@ -4992,7 +6746,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.Fg4l1RGiXzEWc52R"
     },
     {
       "_id": "EwTMplLeZQIZunyv",
@@ -5009,7 +6771,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.EwTMplLeZQIZunyv"
     },
     {
       "_id": "OraXhZPVc8ietAqC",
@@ -5026,7 +6796,15 @@
       "dir": 0,
       "door": 1,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.OraXhZPVc8ietAqC"
     },
     {
       "_id": "KkV0yDn375Upgtuv",
@@ -5043,7 +6821,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.KkV0yDn375Upgtuv"
     },
     {
       "_id": "8ybKUFdYuHAngCGh",
@@ -5060,7 +6846,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.8ybKUFdYuHAngCGh"
     },
     {
       "_id": "V1cCLYM29nJRYFMZ",
@@ -5077,7 +6871,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.V1cCLYM29nJRYFMZ"
     },
     {
       "_id": "rpg93maQQF9ciP83",
@@ -5094,7 +6896,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.rpg93maQQF9ciP83"
     },
     {
       "_id": "E4bVNyMYRxXf9SgV",
@@ -5111,7 +6921,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.E4bVNyMYRxXf9SgV"
     },
     {
       "_id": "UzNNveNCcQBYuoOt",
@@ -5128,7 +6946,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.UzNNveNCcQBYuoOt"
     },
     {
       "_id": "BFqO8Wg48Yc5AFMv",
@@ -5145,7 +6971,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.BFqO8Wg48Yc5AFMv"
     },
     {
       "_id": "utoHuTDlt5RcukCS",
@@ -5162,7 +6996,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.utoHuTDlt5RcukCS"
     },
     {
       "_id": "RTsTYozkdz78vnOD",
@@ -5179,7 +7021,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.RTsTYozkdz78vnOD"
     },
     {
       "_id": "HWyLI53xj7IJSEjZ",
@@ -5196,7 +7046,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.HWyLI53xj7IJSEjZ"
     },
     {
       "_id": "JPjotCtxrxzUvEQJ",
@@ -5213,7 +7071,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.JPjotCtxrxzUvEQJ"
     },
     {
       "_id": "fPeRzBmcWruxXrFu",
@@ -5230,7 +7096,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.fPeRzBmcWruxXrFu"
     },
     {
       "_id": "LoQ5XVC0OaQKOIEJ",
@@ -5247,7 +7121,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.LoQ5XVC0OaQKOIEJ"
     },
     {
       "_id": "g86C48iZ5QtJqgJZ",
@@ -5264,7 +7146,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.g86C48iZ5QtJqgJZ"
     },
     {
       "_id": "xHSwIi4zSowBWfyF",
@@ -5281,7 +7171,15 @@
       "dir": 0,
       "door": 1,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.xHSwIi4zSowBWfyF"
     },
     {
       "_id": "C96lfzxZDd8WHfiz",
@@ -5298,7 +7196,15 @@
       "dir": 0,
       "door": 1,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.C96lfzxZDd8WHfiz"
     },
     {
       "_id": "fCy3DR8hB8OVbqsg",
@@ -5315,7 +7221,15 @@
       "dir": 0,
       "door": 1,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.fCy3DR8hB8OVbqsg"
     },
     {
       "_id": "xx374orWcfdFeuGX",
@@ -5332,7 +7246,15 @@
       "dir": 0,
       "door": 1,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.xx374orWcfdFeuGX"
     },
     {
       "_id": "CnEDoPWErnkuZx0l",
@@ -5349,7 +7271,15 @@
       "dir": 0,
       "door": 1,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.CnEDoPWErnkuZx0l"
     },
     {
       "_id": "ByiIS7lX8g2cvZr0",
@@ -5366,7 +7296,15 @@
       "dir": 0,
       "door": 1,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.ByiIS7lX8g2cvZr0"
     },
     {
       "_id": "5p3RjzexTkSjX9hp",
@@ -5383,7 +7321,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.5p3RjzexTkSjX9hp"
     },
     {
       "_id": "OoQJ5SVn2sSXAmmA",
@@ -5400,7 +7346,15 @@
       "dir": 0,
       "door": 0,
       "ds": 0,
-      "flags": {}
+      "flags": {},
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "_key": "!scenes.walls!ARBUoOUtU4iMFPHn.OoQJ5SVn2sSXAmmA"
     }
   ],
   "playlist": null,
@@ -5411,9 +7365,7 @@
     "wall-height": {
       "advancedVision": false
     },
-    "core": {
-      "sourceId": "Compendium.headshot-theatre-district.marks-headshot-scenes.lUIWNkmdgJV3L41g"
-    }
+    "core": {}
   },
   "ownership": {
     "default": 0,
@@ -5426,22 +7378,72 @@
     "scaleX": 1,
     "scaleY": 1,
     "rotation": 0,
-    "tint": null
+    "tint": "#ffffff",
+    "anchorX": 0,
+    "anchorY": 0,
+    "fit": "fill",
+    "alphaThreshold": 0
   },
   "foregroundElevation": null,
-  "fogOverlay": null,
-  "fogExploredColor": null,
-  "fogUnexploredColor": null,
   "journalEntryPage": null,
   "_stats": {
     "systemId": "pf2e",
     "systemVersion": "4.4.0",
-    "coreVersion": "10.291",
+    "coreVersion": "13.351",
     "createdTime": 1670062800155,
     "modifiedTime": 1670062844780,
-    "lastModifiedBy": "saIaYxNGOV35qD7X"
+    "lastModifiedBy": "saIaYxNGOV35qD7X",
+    "compendiumSource": "Compendium.headshot-theatre-district.marks-headshot-scenes.lUIWNkmdgJV3L41g",
+    "duplicateSource": null,
+    "exportSource": null
   },
   "folder": null,
   "sort": 0,
-  "_id": "ARBUoOUtU4iMFPHn"
+  "_id": "ARBUoOUtU4iMFPHn",
+  "regions": [],
+  "environment": {
+    "globalLight": {
+      "luminosity": 0,
+      "enabled": false,
+      "darkness": {
+        "max": 1,
+        "min": 0
+      },
+      "alpha": 0.5,
+      "bright": false,
+      "color": null,
+      "coloration": 1,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0
+    },
+    "darknessLevel": 0.85,
+    "darknessLock": false,
+    "cycle": true,
+    "base": {
+      "hue": 0,
+      "intensity": 0,
+      "luminosity": 0,
+      "saturation": 0,
+      "shadows": 0
+    },
+    "dark": {
+      "hue": 0.7138888888888889,
+      "intensity": 0,
+      "luminosity": -0.25,
+      "saturation": 0,
+      "shadows": 0
+    }
+  },
+  "fog": {
+    "exploration": true,
+    "reset": 1651499131588,
+    "overlay": null,
+    "colors": {
+      "explored": null,
+      "unexplored": null
+    }
+  },
+  "levels": [],
+  "_key": "!scenes!ARBUoOUtU4iMFPHn"
 }
